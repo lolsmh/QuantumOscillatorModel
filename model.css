@@ -1,0 +1,82 @@
+.custombutton {		/* this class turns an ordinary link into a nice attractive push-button */
+    display: inline-block; 
+    width:150px; 
+    height:30px; 
+    line-height:24px; 
+    font-size:15px; 
+    font-family:Arial, sans-serif; 
+    text-align:center;
+    color:black; 
+    text-decoration:none; 
+    border:1px solid gray; 
+    border-radius: 7px;
+}
+
+input[type=range] {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+sup {
+    position:relative;
+    vertical-align:bottom;
+    bottom:0.4em;
+    font-size:0.75em;
+}
+body {
+    background-color:#fcfdbc;
+    font-family:sans-serif;
+    font-size:15px;
+    line-height:18px;
+}
+#theCanvas {
+    border-radius: 15px;
+    display: inline;
+}
+
+.centeringContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.mainContainer {
+    width: 1300px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.title {
+    font-size:30pt;
+    text-align:center;
+    margin: 40px;
+}
+
+.textContainer {
+    text-align:center;
+    -webkit-text-size-adjust: 100%;
+    margin: 20px;
+}
+
+.slidecontainer {
+    display: inline;
+}
+  
+#speedSlider {
+    -webkit-appearance: none;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin: 20px;
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    width: 15px;
+    height: 600px;
+    padding: 0 5px;
+}
+
+a {
+    margin: 10px;
+}
