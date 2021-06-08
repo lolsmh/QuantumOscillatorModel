@@ -6,10 +6,11 @@
     font-size:15px; 
     font-family:Arial, sans-serif; 
     text-align:center;
-    color:black; 
+    color:white; 
     text-decoration:none; 
     border:1px solid gray; 
     border-radius: 7px;
+    background-color: black;
 }
 
 .info span {
@@ -42,7 +43,7 @@ sup {
     font-size:0.75em;
 }
 body {
-    background-color:#f1cd58bd;
+    background-color: rgb(191, 199, 242);
     font-family:sans-serif;
     font-size:15px;
     line-height:18px;
