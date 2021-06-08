@@ -1,24 +1,71 @@
 <html>
-<head>
-	<title>Моделирование квантового осциллятора</title>
-	<link rel="stylesheet" href="/model.css">
-</head>
-<body>
-	<div class="centeringContainer">
-		<div class="mainContainer">
-			<h1 class="title">Моделирование квантового осциллятора</h1>
-			<div class="slidecontainer">
-				<canvas id="theCanvas" width="1200" height="600">Error!</canvas>
-				<input type="range" orient="vertical" id="speedSlider" min="0" max="0.2" step="0.001" value="0.05">
-			</div>
-			<div class="textContainer">
-				<a href="javascript:void(0)" class="custombutton" id="pauseButton" value="Pause" 
-						onclick="startStop();" ontouchstart="">Стоп</a>
-				<a href="javascript:void(0)" class="custombutton" id="pauseButton" value="Pause" 
-				onclick="zero();" ontouchstart="">Сброс</a>
+	<head>
+		<title>Моделирование квантового гармонического осциллятора</title>
+		<link rel="stylesheet" href="/model.css">
+	</head>
+	<body>
+		<div class="centeringContainer">
+			<div class="mainContainer">
+				<h1>Моделирование квантового гармонического осциллятора</h1>
+				<div class="slidecontainer">
+					<canvas id="theCanvas" width="1200" height="600">Error!</canvas>
+					<input type="range" orient="vertical" id="speedSlider" min="0" max="0.2" step="0.001" value="0.05">
+				</div>
+				<div class="info">
+					<div class="spanContainer">
+						<span id="0n"></span><br>
+						<span id="0p"></span>
+					</div>
+					<div class="spanContainer">
+						<span id="1n"></span><br>
+						<span id="1p"></span>
+					</div>
+					<div class="spanContainer">
+						<span id="2n"></span><br>
+						<span id="2p"></span>
+					</div>
+					<div class="spanContainer">
+						<span id="3n"></span><br>
+						<span id="3p"></span>
+					</div><div class="spanContainer">
+						<span id="4n"></span><br>
+						<span id="4p"></span>
+					</div>
+					<div class="spanContainer">
+						<span id="5n"></span><br>
+						<span id="5p"></span>
+					</div><div class="spanContainer">
+						<span id="6n"></span><br>
+						<span id="6p"></span>
+					</div>
+					<div class="spanContainer">
+						<span id="7n"></span><br>
+						<span id="7p"></span>
+					</div>
+				</div>
+				<div>
+					<a href="javascript:void(0)" class="custombutton" id="displayMode" value="changeDisplayMode" 
+							onclick="changeDisplayMode();" ontouchstart="">Межур. разделение</a>
+					&nbsp;
+					<a href="javascript:void(0)" class="custombutton" id="pauseButton" value="Pause" 
+							onclick="startStop();" ontouchstart="">Пауза</a>
+					&nbsp;
+					<input type="radio" name="plotType" id="realImag" onclick="paintCanvas();">Мнимая/веществ.&nbsp;
+					<input type="radio" name="plotType" checked onclick="paintCanvas();">Альтернатив
+				</div>
+				<div style="text-align:center; -webkit-text-size-adjust: 100%; margin-top:4px;">
+					<a href="javascript:void(0)" class="custombutton" id="pauseButton" value="Pause" 
+							onclick="zero();" ontouchstart="">Очистить</a>
+					<a href="javascript:void(0)" class="custombutton" id="pauseButton" value="Pause" 
+							onclick="normalizePsi();" ontouchstart="">Нормализовать</a>
+					<a href="javascript:void(0)" class="custombutton" id="pauseButton" value="Pause" 
+							onclick="coherent();" ontouchstart="">Когерентность(&alpha;)</a>
+					&alpha; = <span id="alphaReadout">1.0</span> 
+					<input type="range" id="alphaSlider" min="0" max="4" step="0.1" value="1" 
+							onchange="adjustAlpha();" oninput="adjustAlpha();">
+				</div>
 			</div>
 		</div>
-	</div>
-	<script src="/model.js"></script>
-</body>
+		<script src="/model.js"></script>
+	</body>
 </html>
